@@ -93,10 +93,10 @@ function App() {
   }
 
   return (
-    <div className="bg-white text-black min-h-screen overflow-x-hidden mobile-safe-container">
+    <div className="bg-black text-white min-h-screen overflow-x-hidden mobile-safe-container">
       
       {/* HEADER */}
-      <header className="fixed top-0 left-0 right-0 z-50 mix-blend-difference px-4 md:px-8 py-6">
+      <header className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-6">
         <nav className="flex justify-between items-center max-w-[1800px] mx-auto">
           <div className="text-white font-black text-xl md:text-2xl tracking-tighter">
             OPTIC FLOW
@@ -108,7 +108,7 @@ function App() {
       </header>
 
       {/* HERO SECTION */}
-      <section ref={heroRef} className="relative h-[150vh] bg-white">
+      <section ref={heroRef} className="relative h-[150vh] bg-black">
         <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
           
           {/* Background Image with Parallax Scale */}
@@ -120,10 +120,10 @@ function App() {
               <img 
                 src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=1200&q=90" 
                 alt="Futuristic liquid metal glasses"
-                className="w-full h-full object-contain grayscale contrast-125"
+                className="w-full h-full object-contain grayscale contrast-125 invert"
               />
               {/* Gradient overlay for depth */}
-              <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white opacity-40" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-40" />
             </div>
           </motion.div>
 
@@ -132,7 +132,7 @@ function App() {
             className="relative z-10 text-center px-4"
             style={{ y: textY, opacity: textOpacity }}
           >
-            <h1 className="text-[12vw] md:text-[10vw] font-black leading-[0.85] tracking-tighter text-black">
+            <h1 className="text-[12vw] md:text-[10vw] font-black leading-[0.85] tracking-tighter text-white">
               ВИДЕТЬ<br />
               <span className="block ml-[-5vw]">СКВОЗЬ</span>
               <span className="block ml-[10vw]">ВРЕМЯ</span>
@@ -152,13 +152,13 @@ function App() {
 
           {/* Side text */}
           <div className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-10 hidden md:block">
-            <p className="text-xs tracking-[0.4em] uppercase font-semibold opacity-40 writing-mode-vertical transform -rotate-180" style={{ writingMode: 'vertical-rl' }}>
+            <p className="text-xs tracking-[0.4em] uppercase font-semibold opacity-40 writing-mode-vertical transform -rotate-180 text-white" style={{ writingMode: 'vertical-rl' }}>
               Концептуальная оптика 3024
             </p>
           </div>
           
           <div className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 hidden md:block">
-            <p className="text-xs tracking-[0.4em] uppercase font-semibold opacity-40" style={{ writingMode: 'vertical-rl' }}>
+            <p className="text-xs tracking-[0.4em] uppercase font-semibold opacity-40 text-white" style={{ writingMode: 'vertical-rl' }}>
               Токио — Москва — Берлин
             </p>
           </div>
@@ -166,7 +166,7 @@ function App() {
       </section>
 
       {/* COLLECTION SECTION */}
-      <section id="collection" className="py-32 md:py-48 px-4 md:px-8 bg-white">
+      <section id="collection" className="py-32 md:py-48 px-4 md:px-8 bg-black">
         <div className="max-w-[1800px] mx-auto">
           
           {/* Section Header */}
@@ -178,10 +178,10 @@ function App() {
             variants={fadeInUp}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-[15vw] md:text-[12vw] font-black tracking-tighter leading-none">
+            <h2 className="text-[15vw] md:text-[12vw] font-black tracking-tighter leading-none text-white">
               КОЛЛЕКЦИЯ
             </h2>
-            <p className="text-lg md:text-2xl font-light mt-6 tracking-wide opacity-60 max-w-xl">
+            <p className="text-lg md:text-2xl font-light mt-6 tracking-wide opacity-60 max-w-xl text-white">
               Три модели. Три революции. Без компромиссов.
             </p>
           </motion.div>
@@ -199,7 +199,7 @@ function App() {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
                 {/* Image Container */}
-                <div className="relative overflow-hidden bg-neutral-100 mb-8 aspect-[3/4]">
+                <div className="relative overflow-hidden bg-neutral-900 mb-8 aspect-[3/4]">
                   <motion.img 
                     src={item.image} 
                     alt={item.name}
@@ -208,7 +208,7 @@ function App() {
                     transition={{ duration: 0.6 }}
                   />
                   {/* Index number */}
-                  <div className="absolute top-4 left-4 text-6xl font-black opacity-10">
+                  <div className="absolute top-4 left-4 text-6xl font-black opacity-10 text-white">
                     0{index + 1}
                   </div>
                 </div>
@@ -216,15 +216,15 @@ function App() {
                 {/* Content */}
                 <div className="space-y-4">
                   <div className="flex items-baseline gap-4">
-                    <h3 className="text-3xl md:text-4xl font-black tracking-tight">
+                    <h3 className="text-3xl md:text-4xl font-black tracking-tight text-white">
                       {item.name}
                     </h3>
-                    <SafeIcon name="chevron-right" size={20} className="opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1" />
+                    <SafeIcon name="chevron-right" size={20} className="opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1 text-white" />
                   </div>
-                  <p className="text-sm uppercase tracking-[0.2em] font-semibold opacity-40">
+                  <p className="text-sm uppercase tracking-[0.2em] font-semibold opacity-40 text-white">
                     {item.subtitle}
                   </p>
-                  <p className="text-base md:text-lg font-light leading-relaxed opacity-80 max-w-sm">
+                  <p className="text-base md:text-lg font-light leading-relaxed opacity-80 max-w-sm text-white">
                     {item.description}
                   </p>
                 </div>
@@ -238,7 +238,7 @@ function App() {
       </section>
 
       {/* PHILOSOPHY SECTION */}
-      <section className="relative py-32 md:py-64 bg-black text-white overflow-hidden">
+      <section className="relative py-32 md:py-64 bg-white text-black overflow-hidden">
         <div className="max-w-[1800px] mx-auto px-4 md:px-8">
           
           {/* Massive Typography */}
@@ -253,7 +253,7 @@ function App() {
               >
                 <motion.h2 
                   className={`text-[14vw] md:text-[11vw] font-black leading-[0.9] tracking-tighter ${
-                    index === 1 || index === 3 ? 'text-white' : 'text-white/90'
+                    index === 1 || index === 3 ? 'text-black' : 'text-black/90'
                   } ${index === 2 ? 'ml-[-2vw]' : ''} ${index === 3 ? 'ml-[5vw] md:ml-[10vw]' : ''}`}
                   variants={{
                     hidden: { y: '100%', opacity: 0 },
@@ -282,24 +282,24 @@ function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <p className="text-lg md:text-2xl font-light leading-relaxed opacity-70">
+            <p className="text-lg md:text-2xl font-light leading-relaxed opacity-70 text-black">
               Мы не создаём очки. Мы проектируем новые спосбы восприятия реальности. 
               Каждая модель — это протез для расширения человеческих возможностей.
             </p>
-            <div className="mt-8 h-px bg-white/20 w-full" />
-            <p className="mt-8 text-sm uppercase tracking-[0.3em] opacity-40">
+            <div className="mt-8 h-px bg-black/20 w-full" />
+            <p className="mt-8 text-sm uppercase tracking-[0.3em] opacity-40 text-black">
               Основано в 3024
             </p>
           </motion.div>
         </div>
 
         {/* Decorative elements */}
-        <div className="absolute top-20 right-10 w-32 h-32 border border-white/10 rounded-full hidden md:block" />
-        <div className="absolute bottom-40 left-10 w-64 h-64 border border-white/5 rounded-full hidden md:block" />
+        <div className="absolute top-20 right-10 w-32 h-32 border border-black/10 rounded-full hidden md:block" />
+        <div className="absolute bottom-40 left-10 w-64 h-64 border border-black/5 rounded-full hidden md:block" />
       </section>
 
       {/* SPACER SECTION - Air/Breathing */}
-      <section className="h-[50vh] md:h-[80vh] bg-white flex items-center justify-center">
+      <section className="h-[50vh] md:h-[80vh] bg-black flex items-center justify-center">
         <motion.div 
           className="text-center px-4"
           initial={{ opacity: 0 }}
@@ -307,23 +307,23 @@ function App() {
           viewport={{ once: true }}
           transition={{ duration: 1.5 }}
         >
-          <p className="text-[8vw] md:text-[4vw] font-black tracking-tighter opacity-10">
+          <p className="text-[8vw] md:text-[4vw] font-black tracking-tighter opacity-10 text-white">
             LIQUID VISION
           </p>
         </motion.div>
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-white text-black py-24 md:py-32 px-4 md:px-8 telegram-safe-bottom">
+      <footer className="bg-black text-white py-24 md:py-32 px-4 md:px-8 telegram-safe-bottom">
         <div className="max-w-[1800px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
             
             {/* Left - Brand */}
             <div>
-              <h3 className="text-[10vw] md:text-[6vw] font-black tracking-tighter leading-none mb-8">
+              <h3 className="text-[10vw] md:text-[6vw] font-black tracking-tighter leading-none mb-8 text-white">
                 OPTIC<br />FLOW
               </h3>
-              <p className="text-lg font-light opacity-60 max-w-md">
+              <p className="text-lg font-light opacity-60 max-w-md text-white">
                 Цифровая выставка концептуальной оптики. 
                 Жидкий металл. Будущее уже здесь.
               </p>
@@ -332,35 +332,35 @@ function App() {
             {/* Right - Links */}
             <div className="flex flex-col md:flex-row gap-12 md:gap-24">
               <div>
-                <h4 className="text-sm uppercase tracking-[0.3em] font-semibold mb-6 opacity-40">
+                <h4 className="text-sm uppercase tracking-[0.3em] font-semibold mb-6 opacity-40 text-white">
                   Коллекция
                 </h4>
                 <ul className="space-y-3">
-                  <li className="text-lg font-light hover:opacity-60 cursor-pointer transition-opacity">NEON-01</li>
-                  <li className="text-lg font-light hover:opacity-60 cursor-pointer transition-opacity">LIQUID SILVER</li>
-                  <li className="text-lg font-light hover:opacity-60 cursor-pointer transition-opacity">VOID GHOST</li>
+                  <li className="text-lg font-light hover:opacity-60 cursor-pointer transition-opacity text-white">NEON-01</li>
+                  <li className="text-lg font-light hover:opacity-60 cursor-pointer transition-opacity text-white">LIQUID SILVER</li>
+                  <li className="text-lg font-light hover:opacity-60 cursor-pointer transition-opacity text-white">VOID GHOST</li>
                 </ul>
               </div>
               
               <div>
-                <h4 className="text-sm uppercase tracking-[0.3em] font-semibold mb-6 opacity-40">
+                <h4 className="text-sm uppercase tracking-[0.3em] font-semibold mb-6 opacity-40 text-white">
                   Контакты
                 </h4>
                 <ul className="space-y-3">
-                  <li className="text-lg font-light opacity-80">Токио, Сибуя</li>
-                  <li className="text-lg font-light opacity-80">Москва, Арбат</li>
-                  <li className="text-lg font-light opacity-80">info@opticflow.io</li>
+                  <li className="text-lg font-light opacity-80 text-white">Токио, Сибуя</li>
+                  <li className="text-lg font-light opacity-80 text-white">Москва, Арбат</li>
+                  <li className="text-lg font-light opacity-80 text-white">info@opticflow.io</li>
                 </ul>
               </div>
             </div>
           </div>
 
           {/* Bottom bar */}
-          <div className="mt-24 pt-8 border-t border-black/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <p className="text-xs tracking-[0.2em] uppercase opacity-40">
+          <div className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <p className="text-xs tracking-[0.2em] uppercase opacity-40 text-white">
               © 3024 OPTIC FLOW. Все права защищены.
             </p>
-            <p className="text-xs tracking-[0.2em] uppercase opacity-40">
+            <p className="text-xs tracking-[0.2em] uppercase opacity-40 text-white">
               Дизайн: Будущее
             </p>
           </div>
