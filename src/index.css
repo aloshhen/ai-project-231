@@ -15,8 +15,8 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #000000;
+  color: #FFFFFF;
   overflow-x: hidden;
 }
 
@@ -26,17 +26,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFFFFF;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: #FFFFFF;
 }
 
 /* Selection */
 ::selection {
-  background: #000000;
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: #000000;
 }
 
 /* Prevent horizontal scroll */
